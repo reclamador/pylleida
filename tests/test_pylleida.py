@@ -5,17 +5,15 @@
 
 
 import unittest
+from pylleida import PyLleida
 
 
 class TestPylleida(unittest.TestCase):
-    """Tests for `pylleida` package."""
-
     def setUp(self):
-        """Set up test fixtures, if any."""
+        self.client = PyLleida(username='foo', password='bar')
 
     def tearDown(self):
-        """Tear down test fixtures, if any."""
+        pass
 
-    def test_000_something(self):
-        """Test something."""
-        self.assertEqual(1, 1)
+    def test_has_mailcert_api(self):
+        self.assertIsNotNone(self.client.mailcert)
