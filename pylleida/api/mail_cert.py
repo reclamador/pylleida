@@ -8,7 +8,9 @@ class MailCertApi(BaseApi):
         super(MailCertApi, self).__init__(**config)
 
     def get_default_settings(self):
-        pass
+        template_name = 'get_default_settings.xml'
+        params = {}
+        return self.post(endpoint=self.endpoint, template_name=template_name, in_params=params)
 
     def list_pdf(self):
         pass
