@@ -5,9 +5,6 @@
 
 
 import unittest
-from click.testing import CliRunner
-
-from pylleida import pylleida
 
 
 class TestPylleida(unittest.TestCase):
