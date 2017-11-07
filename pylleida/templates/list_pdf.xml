@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<list_pdf>
+    <user>{{username}}</user>
+    <password>{{password}}</password>
+    {% if not only_last_file_id %}
+
+    {% if mail_from %}<mail_from>{{mail_from}}</mail_from>{% endif %}
+    {% if mail_to %}<mail_to>{{mail_to}}</mail_to>{% endif %}
+    {% if date_min %}<date_min>{{date_min}}</date_min>{% endif %}
+    {% if date_max %}<date_max>{{date_min}}</date_max>{% endif %}
+    {% if file_id_min %}<file_id_min>{{file_id_min}}</file_id_min>{% endif %}
+    {% if file_id_max %}<file_id_max>{{file_id_max}}</file_id_max>{% endif %}
+    {% if file_type %}<file_type>{{file_type}}</file_type>{% endif %}
+    {% if subjrw %}<subjrw>{{subjrw}}</subjrw>{% endif %}
+    {% if mail_message_id %}<mail_message_id>{{mail_message_id}}</mail_message_id>{% endif %}
+    {% if row_order %}<row_order>{{row_order}}</row_order>{% endif %}
+
+    {% else %}
+        <only_last_file_id/>
+    {% endif %}
+</list_pdf>
