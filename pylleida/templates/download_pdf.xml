@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<download_pdf>
+    <user>{{username}}</user>
+    <password>{{password}}</password>
+    <file_id>{{file_id}}</file_id>
+</download_pdf>
