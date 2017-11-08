@@ -53,7 +53,18 @@ class MailCertApi(BaseApi):
             'only_last_file_id': only_last_file_id
         }
         response = self.post(endpoint=self.endpoint, template_name=template_name, in_params=params)
-        return MailCertApiResponse(response['result']['pdf_list'])
+        return MailCertApiResponse(response)
 
-    def download_pdf(self):
-        pass
+    def download_pdf(self, file_id):
+        """
+        Returns the contents of an email certificate PDF file, whose file identifier matches
+        the provided input parameter.
+
+        :param file_id: the Lleida.net identifier of the requested PDF file.
+        :return: a MailCertResponse object whose 'content' attribute stores the binary contents of the PDF file.
+        """
+        template_name = 'download_pdf.xml'
+        params = {'file_id': file_id}
+
+        response = self.post(endpoint=self.endpoint, template_name=template_name, in_params=params)
+        return MailCertApiResponse(response)
