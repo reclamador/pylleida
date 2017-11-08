@@ -25,10 +25,14 @@ class BaseApi(object):
 
         request_data = {'xml': template}
         headers = {'content-type': 'application/x-www-form-urlencoded'}
-
         response = requests.post(endpoint, data=request_data, headers=headers, timeout=self.TIMEOUT)
-        xml_response = xmltodict.parse(xml_input=response.content)
-        return self._xml_to_json(xml_response)
+
+        try:
+            xml_response = xmltodict.parse(xml_input=response.content)
+            ret_response = self._xml_to_json(xml_response)
+        except xmltodict.expat.ExpatError:
+            ret_response = {'content': response.content}
+        return ret_response
 
 
 class ResponseItem(object):
