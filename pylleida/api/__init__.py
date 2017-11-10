@@ -68,4 +68,3 @@ class BaseResponse(object):
                 setattr(obj, formatted_key, new_obj)
             else:
                 setattr(obj, formatted_key, value)
-

@@ -4,7 +4,7 @@
 
 __author__ = """NickM. Jaremek"""
 __email__ = 'nick13jaremek@gmail.com'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 from pylleida.api.mail_cert import MailCertApi
 
