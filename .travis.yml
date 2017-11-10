@@ -4,12 +4,13 @@ deploy:
     python: 2.7
     repo: reclamador/pylleida
     tags: true
-  distributions: sdist bdist_wheel
   password:
     secure: TXenmQjBn5HHpWZaKwoAuMaJSBHNP7aa+1i2kg8kJ+DxrF6AZm5nCxDW2MCPWFu5WtQQoEEBsIFxR6ZwMphjitrsGobQpz1ecJVmlPWvWljyHtm+7WA96Nfj+eOQr+ekj+Pc6a+1vgRv0u4/SI7qqOlAhM8kEidfxwkx0haKOAlad1U4AgB3qfK0MGpyWiJayoNDrUF6JZs9pWh6iK/jcGwpmgH7zsmO29IJ2FuRgxmTQpFQTqjV0X0VCIKKBHERgYO4105X7UmxxR5LB4FHk8GOhvN02iOHfyLborgRL0RUXxfF/CETi5GnF6X5SXe1AwcrnqRlyAdI7MYQDh5dWwJKFIRQNh6jukzw2oLQbVL7Rf/K+qq3NBMyF+Xpsa30/EIMbiYeMtrnwRK6och5MlOjqkRyUuw3Y5oI0gQokNAE0SCGJXg+5LbvcjlEpbEJCRp3JQFc/JD5WNROd1pvPuwJ030s750AIc6upcDyD3IR+r4G4jDtFkz4KuvjChJrJx3tSKSKwXA++f3+wMAQOAcNAd5cINYAL+2WOWtXAwOB7E863uSlY/aIOlnHtcZcwFqmhvpj/C/OPJ/UXFXBJC5TQtDBugx7QUvOHptJ3WHJpKh7BmlpBgCNmZW6Q6wSF03ZsNZvzQwx4+i95xZvAyG1E04goWaUI60zkFrSYEg=
   provider: pypi
   user: nick13jaremek
-install: pip install -U tox-travis
+install:
+    - pip install -r requirements_dev.txt
+    - pip install -r requirements.txt
 language: python
 python:
 - 2.7
