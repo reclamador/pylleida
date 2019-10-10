@@ -9,9 +9,10 @@ deploy:
   provider: pypi
   user: nick13jaremek
 install:
-    - pip install -r requirements_dev.txt
     - pip install -r requirements.txt
+    - pip install -r requirements_dev.txt
 language: python
 python:
 - 2.7
+- 3.5
 script: tox
