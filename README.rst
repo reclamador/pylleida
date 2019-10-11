@@ -7,7 +7,10 @@ pylleida
         :target: https://pypi.python.org/pypi/pylleida
 
 .. image:: https://img.shields.io/travis/nick13jaremek/pylleida.svg
-        :target: https://travis-ci.org/nick13jaremek/pylleida
+        :target: https://travis-ci.org/reclamador/pylleida
+
+.. image:: https://coveralls.io/repos/github/reclamador/pylleida/badge.svg?branch=master
+        :target: https://coveralls.io/github/reclamador/pylleida?branch=master
 
 .. image:: https://readthedocs.org/projects/pylleida/badge/?version=latest
         :target: https://pylleida.readthedocs.io/en/latest/?badge=latest
