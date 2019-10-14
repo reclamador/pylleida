@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from .api.mail_cert import MailCertApi
 
 
 class PyLleida(object):
@@ -17,5 +18,4 @@ class PyLleida(object):
             username=username,
             password=password
         )
-        from .api.mail_cert import MailCertApi
         self.mailcert = MailCertApi(config)
