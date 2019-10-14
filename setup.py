@@ -14,7 +14,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'Jinja2==2.9.5',
     'xmltodict==0.10.2',
-    'requests==2.18.4'
+    'requests==2.20.0'
 
 ]
 
