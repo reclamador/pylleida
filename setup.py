@@ -24,7 +24,7 @@ test_requirements = []
 
 setup(
     name='pylleida',
-    version='0.3.3',
+    version='0.4.0',
     description="A HTTP Python client to use the Lleida.net API",
     long_description=readme + '\n\n' + history,
     author="Nick M. Jaremek",
